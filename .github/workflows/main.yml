@@ -13,5 +13,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: echo "append test 1 from github" >> /var/www/test.html
 
