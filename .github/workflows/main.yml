@@ -6,18 +6,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    # - name: executing remote ssh commands using password
-    #   uses: appleboy/ssh-action@v1.0.3
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     script: ls
-  
-    # - name: execute repo
-    #   uses: actions/checkout@v2.3.4
-    # - run:  rsync -avz -e ssh . root@209.38.172.163:/var/www/
     - uses: actions/checkout@v4
     - name: copy file via ssh key
     
