@@ -15,7 +15,17 @@ jobs:
     #     port: ${{ secrets.PORT }}
     #     script: ls
   
-    - name: execute repo
-      uses: actions/checkout@v2.3.4
-    - run:  rsync -avz -e ssh . root@209.38.172.163:/var/www/
+    # - name: execute repo
+    #   uses: actions/checkout@v2.3.4
+    # - run:  rsync -avz -e ssh . root@209.38.172.163:/var/www/
+
+    - name: copy file via ssh key
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY }}
+        source: "*"
+        target: /var/www/
 
