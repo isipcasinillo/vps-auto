@@ -17,5 +17,5 @@ jobs:
   
     - name: execute repo
       uses: actions/checkout@v2.3.4
-    - run:  rsync -avz  --include="*"  / root@209.38.172.163:/var/www/
+    - run:  rsync -avz -e ssh . root@209.38.172.163:/var/www/
 
