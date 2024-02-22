@@ -17,4 +17,4 @@ jobs:
   
     - name: execute repo
       uses: actions/checkout@v2.3.4
-      script:  cat test.html
+      run:  cat test.html
